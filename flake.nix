@@ -26,6 +26,10 @@
               pkgs.just
               pkgs.rustup
             ];
+            shellHook = ''
+              # Enable Git Hook
+              vp config
+            '';
           };
         }
       );
