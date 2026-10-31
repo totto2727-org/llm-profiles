@@ -20,7 +20,7 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
         in
-        {
+        rec {
           default = pkgs.mkShell {
             packages = [
               pkgs.just
@@ -31,6 +31,7 @@
               vp config
             '';
           };
+          ci = default.overrideAttrs (_: { shellHook = ""; });
         }
       );
     };
