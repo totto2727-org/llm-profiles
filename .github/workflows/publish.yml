@@ -18,6 +18,7 @@ jobs:
     environment: crates-io
     steps:
       - uses: actions/checkout@v7
+      - uses: totto2727-org/monorepo/.github/actions/setup-typescript@main
       - uses: totto2727-org/monorepo/.github/actions/setup-nix@main
       - uses: totto2727-org/monorepo/.github/actions/publish-crate@main
         with:
