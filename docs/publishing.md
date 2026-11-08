@@ -37,7 +37,7 @@ If an upload times out, check crates.io before retrying.
 
 ```bash
 nix develop --command just ci
-nix develop --command just publish-dry-run
+nix develop --command just publish::dry-run
 ```
 
 Run packaging commands from a clean committed checkout.
